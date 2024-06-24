@@ -26,7 +26,7 @@ pipeline {
                 script {
                     sh 'terraform init -backend-config="bucket=$AWS_BUCKET" -backend-config="key=$AWS_BUCKET_KEY" '
                     sh 'terraform plan'
-                    sh 'terraform apply'
+                    sh 'terraform apply --auto-approve'
                 }
             }    
         }    
