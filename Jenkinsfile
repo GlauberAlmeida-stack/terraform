@@ -5,7 +5,7 @@ pipeline {
 
         stage("Verificar código") {
 
-            step {
+            steps {
                 git url: 'https://github.com/GlauberAlmeida-stack/terraform.git', branch: 'main'
                 sh 'ls'
             }
