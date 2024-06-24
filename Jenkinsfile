@@ -12,11 +12,14 @@ pipeline {
         }
 
         stage("Execução Pipeline") {
-            script {
-                sh 'terraform init'
-                sh 'terraform plan'
-                sh 'terraform apply'
-            }
+
+            steps{
+                script {
+                    sh 'terraform init'
+                    sh 'terraform plan'
+                    sh 'terraform apply'
+                }
+            }    
         }    
                 
     }
