@@ -22,7 +22,8 @@ resource "aws_instance" "db" {
     ami = var.ec2type2
     instance_type = var.typeinstance
     security_groups = [aws_security_group.web_traffic_challenge3.name]
-
+    key_name = "userec2"
+    
     tags = {
         Name = var.dbname
     }
