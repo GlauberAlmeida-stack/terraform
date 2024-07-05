@@ -43,6 +43,7 @@ resource "aws_instance" "web" {
 
 resource "aws_eip" "web_ip" {
     instance = aws_instance.web.id
+    instance = aws_instance.db.id
 }
 
 variable "ingress" {
