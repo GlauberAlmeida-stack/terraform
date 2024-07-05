@@ -43,6 +43,8 @@ resource "aws_instance" "web" {
 
 resource "aws_eip" "web_ip" {
     instance = aws_instance.web.id
+
+resource "aws_eip" "db_ip" {
     instance = aws_instance.db.id
 }
 
